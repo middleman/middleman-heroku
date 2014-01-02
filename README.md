@@ -18,7 +18,7 @@ $ heroku open
 
 - `/` will try to serve your `build/index.html` file.
 - `/foo` will try to serve `build/foo` or `build/foo.html` in that order.
-- If TryStatic can't find a file it will serve `source/404.html.erb`.
+- if a file can't be found it will serve `build/404/index.html`.
 
 ## Community
 
