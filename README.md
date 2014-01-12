@@ -38,4 +38,4 @@ Copyright (c) 2012-2014 André Arko. MIT Licensed, see [LICENSE] for details.
 [heroku]: http://heroku.com
 [rack::trystatic]: https://github.com/rack/rack-contrib/blob/master/lib/rack/contrib/try_static.rb
 [puma]: http://puma.io
-[LICENSE]: https://github.com/middleman/middleman/middleman-heroku/blob/master/LICENSE.md
+[LICENSE]: https://github.com/middleman/middleman-heroku/blob/master/LICENSE.md
