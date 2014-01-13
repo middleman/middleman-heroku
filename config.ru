@@ -17,7 +17,7 @@ module Rack
     def call(env)
       orig_path = env['PATH_INFO']
       found = nil
-      
+
       @try.each do |path|
         resp = @static.call(env.merge!({'PATH_INFO' => orig_path + path}))
         break if 404 != resp[0] && found = resp
@@ -29,7 +29,11 @@ module Rack
 end
 
 use Rack::Deflater
-use Rack::TryStatic, root: 'build', urls: %w(/), try: %w(.html index.html /index.html)
+use Rack::TryStatic,
+  root: 'build',
+  urls: %w(/),
+  try: %w(.html index.html /index.html),
+  cache_control: 'public, max-age=2592000'
 
 # Run your own Rack app here or use this one to serve 404 messages:
 run lambda { |env|
